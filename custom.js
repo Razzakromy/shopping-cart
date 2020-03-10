@@ -3,11 +3,16 @@
 const cartRemove = document.getElementById("remove-phn");
 cartRemove.addEventListener("click",function(){
     remove("cartRemove");
+    document.getElementById("phonePrice").innerText = 0;
+    subTotalTaxTotal();
 });
 
+// Click to Remove Case
 const caseRemove = document.getElementById("remove-case");
 caseRemove.addEventListener("click",function(){
     remove("caseRemove");
+    document.getElementById("casePrice").innerText = 0;
+    subTotalTaxTotal();
 });
 
 
@@ -88,7 +93,8 @@ function subTotalTaxTotal() {
 
 // Checkout
 function checkOut() {
-    alert("Your Check Out has been completed")
+    alert("Your Check Out has been completed");
+    location.reload();
 }
 
 
